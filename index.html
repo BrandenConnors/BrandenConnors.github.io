@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="src/styles.css"  />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&display=swap" rel="stylesheet">"
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/340c3f748c.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Portfolio</title>
 </head>
@@ -12,17 +13,20 @@
     <section class="hero">
         <nav>
             <img class="logo" src="src/images/logo.jpg" alt="Branden Connor's Logo" />
-            <ul>
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>Contact Us</li>
+            <ul id="nav-list">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
         <div class="hero-area">
             <div class="hero-text">
                 <h1>Branden Connors</h1>
                 <p>Aspiring full stack developer</p>
-                <div class="button">About Me</div>
+                <div class="button"><a href="#about-me">About Me<a></div>
             </div>
             <div class="socials">
                <div> <a href="https://www.twitter.com" class="social"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a></div>
@@ -32,7 +36,7 @@
         </div>
       
     </section>
-    <section class="sub-section">
+    <section class="sub-section" id="about-me">
         <div class="information">
             <h2>About Me</h2>
             <p>Hello my name is Branden and im a software developer with a passion for ai learning.</p>
@@ -41,42 +45,43 @@
             <img class="headshot" src="src/images/headshot.jpeg" alt="branden's headshot" />
         </div>
     </section>
-    <section class="sub-section-alternative">
+    <section class="sub-section-alternative" id="projects">
         <h2>Projects</h2>
         <div class="project-container">
             <div class="project-card">
-                <img class="project-image" src="" alt="Project One Image" />
+                <img class="project-image" src="src/images/projectone.jpg" alt="Project One Image" />
                 <h3>Project One</h3>
                 <p class="subtext">This is my project and some text about it. </p>
                 <hr />
-                <p class="subtext">View Here</p>
+                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
             </div>
             <div class="project-card">
-                <img class="project-image" src="" alt="Project Two Image" />
+                <img class="project-image" src="src/images/projecttwo.jpg" alt="Project Two Image" />
                 <h3>Project Two</h3>
                 <p class="subtext">This is my project and some text about it. </p>
                 <hr />
-                <p class="subtext">View Here</p>
+                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
             </div>
             <div class="project-card">
-                <img class="project-image" src="" alt="Project Three Image" />
+                <img class="project-image" src="src/images/projectthree.jpg" alt="Project Three Image" />
                 <h3>Project Three</h3>
                 <p class="subtext">This is my project and some text about it. </p>
                 <hr />
-                <p class="subtext">View Here</p>
+                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
             </div>
             <div class="project-card">
-                <img class="project-image" src="" alt="Project Four Image" />
+                <img class="project-image" src="src/images/project4.jpg" alt="Project Four Image" />
                 <h3>Project Four</h3>
                 <p class="subtext">This is my project and some text about it. </p>
                 <hr />
-                <p class="subtext">View Here</p>
+                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
             </div>
         </div>
     </section>
-    <footer></footer>
-
-
+    <footer id="contactus">
+        <h2>Contact Me</h2>
+        <p><a href="email:brand3nconnors@gmail.com">brand3nconnors@gmail.com</a></p>
+    </footer>
     <script src="src/app.js"></script>
 </body>
 </html>
