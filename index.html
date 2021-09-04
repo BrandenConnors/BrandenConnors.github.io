@@ -1,87 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="src/styles.css"  />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/340c3f748c.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/340c3f748c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
-    <section class="hero">
-        <nav>
-            <img class="logo" src="src/images/logo.jpg" alt="Branden Connor's Logo" />
-            <ul id="nav-list">
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contactus">Contact Us</a></li>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <li><a href="#contact"class="menu-btn">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <div class="menu-btn">
                 <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-        <div class="hero-area">
-            <div class="hero-text">
-                <h1>Branden Connors</h1>
-                <p>Aspiring full stack developer</p>
-                <div class="button"><a href="#about-me">About Me<a></div>
-            </div>
-            <div class="socials">
-               <div> <a href="https://www.twitter.com" class="social"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a></div>
-               <div> <a href="https://www.linkedin.com" class="social"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg></a></div>
-               <div> <a href="https://www.github.com" class="social"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div>
             </div>
         </div>
-      
-    </section>
-    <section class="sub-section" id="about-me">
-        <div class="information">
-            <h2>About Me</h2>
-            <p>Hello my name is Branden and im a software developer with a passion for ai learning.</p>
+    </nav>
+<!-- home section start -->
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">Hello, my name is</div>
+            <div class="text-2">Branden Connors</div>
+            <div class="text-3">and I'm a <span class="typing"></span></div>
+            <a href="#">Hire me</a>
         </div>
-        <div class="headshot-container">
-            <img class="headshot" src="src/images/headshot.jpeg" alt="branden's headshot" />
+    </div>
+</section>
+
+<!-- about section start-->
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+       <div class="column left">
+           <img src="images/profile-1.jpeg" alt="">
+       </div>
+       <div class="column right">
+           <div class="text">I'm Branden and I'm a <span class="typing-2"></span></div>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, deserunt omnis iste cupiditate cum maxime nam praesentium impedit explicabo perspiciatis illum consectetur quidem nulla quas adipisci nisi inventore modi molestiae deleniti expedita, laudantium dolorem culpa ex aspernatur. Beatae esse optio sequi ipsam tempora! Nam porro assumenda dolorem earum accusamus soluta temporibus? Consectetur, id? Unde nihil ad qui perspiciatis id sapiente.</p>
+            <a href="#">Download CV</a>
+       </div>
         </div>
-    </section>
-    <section class="sub-section-alternative" id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img class="project-image" src="src/images/projectone.jpg" alt="Project One Image" />
-                <h3>Project One</h3>
-                <p class="subtext">This is my project and some text about it. </p>
-                <hr />
-                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
-            </div>
-            <div class="project-card">
-                <img class="project-image" src="src/images/projecttwo.jpg" alt="Project Two Image" />
-                <h3>Project Two</h3>
-                <p class="subtext">This is my project and some text about it. </p>
-                <hr />
-                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
-            </div>
-            <div class="project-card">
-                <img class="project-image" src="src/images/projectthree.jpg" alt="Project Three Image" />
-                <h3>Project Three</h3>
-                <p class="subtext">This is my project and some text about it. </p>
-                <hr />
-                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
-            </div>
-            <div class="project-card">
-                <img class="project-image" src="src/images/project4.jpg" alt="Project Four Image" />
-                <h3>Project Four</h3>
-                <p class="subtext">This is my project and some text about it. </p>
-                <hr />
-                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
+    </div>
+</section>
+
+<!-- services section start-->
+<section class="services" id="services">
+    <div class="max-width">
+        <h2 class="title">My Services</h2>
+        <div class="serv-content">
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-paint-brush"></i>
+                <div class="text">Web Design</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cumque enim sapiente expedita aliquam facilis?</p>
             </div>
         </div>
-    </section>
-    <footer id="contactus">
-        <h2>Contact Me</h2>
-        <p><a href="email:brand3nconnors@gmail.com">brand3nconnors@gmail.com</a></p>
-    </footer>
-    <script src="src/app.js"></script>
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-chart-line"></i>
+                <div class="text">Advertising</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cumque enim sapiente expedita aliquam facilis?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-code"></i>
+                <div class="text">App Design</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cumque enim sapiente expedita aliquam facilis?</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+<div class="max-width">
+    <h2 class="title">My Skills</h2>
+    <div class="skills-content">
+        <div class="column left">
+            <div class="text">My Creative Skills & experinces.</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facere, eos iusto omnis repellat quisquam rerum ab eum voluptatibus tempora, odio sit dicta minus laudantium esse cupiditate fugit ipsum eaque asperiores? Minus quas explicabo accusamus perspiciatis, nemo repudiandae rerum fuga, voluptate consequatur soluta assumenda illum culpa, debitis voluptates veritatis placeat corrupti omnis aliquam. Quisquam molestias hic recusandae. Aliquam, veniam nobis.</p>
+        <a href="#">Read More</a>
+        </div>
+
+         <div class="column right">
+           <div class="bars">
+               <div class="info">
+                   <span>HTML</span>
+                   <span>90%</span>
+               </div>
+               <div class="line html"></div>
+           </div>
+
+           <div class="bars">
+            <div class="info">
+                <span>CSS</span>
+                <span>70%</span>
+            </div>
+            <div class="line css"></div>
+        </div>
+
+        <div class="bars">
+            <div class="info">
+                <span>Php</span>
+                <span>10%</span>
+            </div>
+            <div class="line php"></div>
+        </div>
+
+         </div>
+</div>
+</div>
+</section>
+
+<!-- projects section  -->
+<section class="projects" id="projects">
+    <div class="max-width">
+        <h2 class="title">My Projects</h2>
+        <div class="carousel owl-carousel">
+            <div class="card">
+                <div class="box">
+                <img src="images/profile-3.jpg" alt="">
+                <div class="text">Project Name</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                <img src="images/profile-3.jpg" alt="">
+                <div class="text">Project Name</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                <img src="images/profile-3.jpg" alt="">
+                <div class="text">Project Name</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                <img src="images/profile-3.jpg" alt="">
+                <div class="text">Project Name</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                <img src="images/profile-3.jpg" alt="">
+                <div class="text">Project Name</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section start -->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contact me</h2>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">Get in Touch</div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                <div class="icons">
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="sub-title">Branden</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Address</div>
+                            <div class="sub-title">Bay Area, CA</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">Email</div>
+                            <div class="sub-title">brand3nconnors@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="text">Message me</div>
+                <form action="#">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="field textarea">
+                        <textarea cols="30" rows="10" placeholder="Describe project..." required></textarea>
+                    </div>
+                    <div class="button-area">
+                        <button type="submit">Send message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section -->
+<footer>
+    <span>Created by <a href="#"> Savage Designs   </a><span class="far fa-copyright">  2021 All rights reserved.</span></span>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
